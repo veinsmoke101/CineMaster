@@ -1,0 +1,728 @@
+@import url("http://fonts.cdnfonts.com/css/rooster-personal-use");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'sansation';
+  src: url("../../images/webfontkit-20220218-110916/sansation_regular-webfont.woff2") format("woff2"), url("../../images/webfontkit-20220218-110916/sansation_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #1C0118;
+}
+
+nav {
+  background-color: #1C0118;
+  color: white;
+  width: 100%;
+  height: 11vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .nav-container {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .nav-container .logo {
+  margin-left: 5%;
+  font-size: 36px;
+  font-family: 'ROOSTER PERSONAL USE', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media (max-width: 720px) {
+  nav .nav-container .logo {
+    font-size: 24px;
+  }
+}
+
+nav .nav-container .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: auto;
+  list-style: none;
+  width: 40%;
+}
+
+nav .nav-container .list .item {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 720px) {
+  nav .nav-container .list .item {
+    font-size: 14px;
+    margin-right: 5px;
+  }
+}
+
+nav .nav-container .list .item a {
+  color: white;
+  text-decoration: none;
+}
+
+nav .nav-container .list .item .search-bar {
+  position: relative;
+}
+
+nav .nav-container .list .item .search-bar input {
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+}
+
+@media (max-width: 480px) {
+  nav .nav-container .list .item .search-bar input {
+    width: 150%;
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+    padding: 4px 8px;
+  }
+}
+
+nav .nav-container button {
+  display: none;
+}
+
+aside {
+  background-color: white;
+  width: 250px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 23%;
+  left: 4%;
+}
+
+aside .link {
+  color: black;
+  text-decoration: none;
+  margin: 10px 0;
+  margin-left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+aside .link img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+aside .see-more {
+  color: darkgray;
+  margin-left: 49px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 1220px) {
+  aside {
+    display: none;
+  }
+}
+
+.main {
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 15vh;
+  width: 50%;
+}
+
+.main .form-container {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .form-container .modal-overlay {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.main .form-container .modal-overlay.active {
+  opacity: 0.5;
+}
+
+.main .form-container form {
+  /* From https://css.glass */
+  /* From https://css.glass */
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin-top: 60px;
+  width: 60%;
+  height: 80%;
+  padding-left: 5%;
+  font-family: 'sansation';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.main .form-container form .close {
+  top: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+.main .form-container form .close img {
+  width: 20px;
+  height: 20px;
+}
+
+.main .form-container form legend {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.main .form-container form span a {
+  text-decoration: none;
+  color: #D90429;
+}
+
+.main .form-container form input {
+  width: 80%;
+  padding: 8px 24px;
+  background-color: white;
+  border: 1px solid gray;
+  outline: 1px solid gray;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 2px -1px #1C0118;
+          box-shadow: 0px 0px 2px -1px #1C0118;
+}
+
+.main .form-container form .submit {
+  width: 170px;
+  height: 45px;
+  background-color: #D90429;
+  border: none;
+  color: white;
+  outline: none;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-family: 'sansation';
+  border-radius: 10px;
+  margin: 5% 0;
+}
+
+.main .form-container.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.main .post {
+  position: relative;
+  padding-bottom: 20px;
+  margin-top: 5%;
+  background-color: white;
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .post .update-delete {
+  background-color: lightgray;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 100px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  border-radius: 10px;
+}
+
+.main .post .update-delete.active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.main .post .update-delete form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .post .update-delete form button {
+  background-color: transparent;
+  width: 80px;
+  height: 30px;
+  border: none;
+  text-align: start;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+
+.main .post .view-more {
+  cursor: pointer;
+  width: 30px;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 20;
+}
+
+.main .post .author {
+  margin-top: 10px;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main .post .author img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.main .post .author .author-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 10px;
+}
+
+.main .post .author .author-info .author-name {
+  font-weight: bold;
+}
+
+.main .post .author .author-info .categorie {
+  color: darkgray;
+}
+
+.main .post .heading {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.main .post .post-image {
+  margin-left: 10px;
+  width: 97%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .post .post-image img {
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1220px) {
+  .main .post .post-image {
+    margin-left: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main .post .post-image {
+    margin-left: 4px;
+  }
+}
+
+.main .post .comments {
+  margin-top: 10px;
+  border-top: 1px solid gray;
+  width: 90%;
+  margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .post .comments a {
+  font-size: 12px;
+  color: gray;
+}
+
+.main .post .comments .comment-form {
+  margin-top: 5px;
+  width: 90%;
+  height: 30px;
+}
+
+.main .post .comments .comment-form input {
+  background-color: lightgray;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: 1px solid darkgray;
+  padding: 5px 12px;
+}
+
+.main .post .comments .comments-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .post .comments .comments-container .user-comment {
+  margin-top: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .post .comments .comments-container .user-comment img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.main .post .comments .comments-container .user-comment .comment-info {
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: lightgray;
+  border-radius: 12px;
+  margin-left: 10px;
+}
+
+.main .post .comments .comments-container .user-comment .comment-info .comment-author {
+  font-size: 14px;
+}
+
+.main .post .comments .comments-container .user-comment .comment-info p {
+  font-size: 14px;
+}
+
+.main .add-post {
+  padding-bottom: 20px;
+  margin-top: 5%;
+  background-color: white;
+  border-radius: 16px;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 20px;
+}
+
+@media (max-width: 720px) {
+  .main {
+    width: 80%;
+  }
+}
+
+@media (max-width: 1220px) {
+  .main {
+    width: 70%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    width: 90%;
+  }
+}
+
+body {
+  background-color: #1C0118 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #1C0118;
+}
+
+footer {
+  background-color: black;
+  height: 30vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-family: 'sansation';
+  color: white;
+}
+
+footer .logo {
+  font-size: 36px;
+  font-family: 'ROOSTER PERSONAL USE', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+footer .socials {
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .socials img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+footer .copyright {
+  font-size: 12px;
+  color: gray;
+}
+/*# sourceMappingURL=post.css.map */

@@ -1,0 +1,99 @@
+main{
+    width: 100%;
+    height: 65vh;
+    background-image: url('../../images/Lord\ of\ the\ Rings\ Backgrounds\ 6.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 60px;
+
+    .heading{
+        position: relative;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align: center;
+
+        .header{
+            font-family: 'sansation';
+            font-size: 36px;
+            @include tablet{
+                font-size: 24px;
+                
+            }
+        }
+        p{
+            font-size: 24px;
+            @include tablet{
+                font-size: 16px;
+                
+            }
+        }
+        @include flexColumn(center,center);
+        
+    }
+    .overlay{
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        top: 0;
+        background-color: black;
+        opacity: 0.5;
+        position: absolute;
+        
+    }
+    .search-container{
+        width: 100%;
+        height: 120px;
+        z-index: 99;
+        position: absolute;
+        bottom: -16%;
+        .search-bar{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            @include flexRow(center,center);
+            .search-input{
+                
+                width: 50%;
+                height: 50%;
+                border-radius: 10px;
+                border: none;
+                outline: none;
+                font-size: 20px;
+                padding: 0 20px;
+                &::placeholder{
+                    font-size:20px;
+                }    
+                @include tablet{
+                    font-size: 24px;
+                    width: 90%;
+                }            
+            }
+            button{
+                cursor: pointer;
+                position: absolute;
+                right: 27%;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                width: 35px;
+                height: 35px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+                @include tablet{
+                    right: 10%;
+                } 
+                
+            }
+        }
+    }
+
+    
+
+    
+}

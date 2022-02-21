@@ -1,0 +1,27 @@
+footer{
+    background-color: black;
+    height: 30vh;
+    width: 100%;
+    @include flexColumn(center,space-around);
+    font-family: 'sansation';
+    color: white;
+    .logo {
+        font-size: 36px;
+        font-family: 'ROOSTER PERSONAL USE', sans-serif;
+        user-select: none;
+    }
+    .socials{
+        width: 15%;
+        @include flexRow(center,space-evenly);
+
+        img{
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+        }
+    }
+    .copyright{
+        font-size: 12px;
+        color: gray;
+    }
+}

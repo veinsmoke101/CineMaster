@@ -1,0 +1,249 @@
+@import url("http://fonts.cdnfonts.com/css/rooster-personal-use");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'sansation';
+  src: url("../../images/webfontkit-20220218-110916/sansation_regular-webfont.woff2") format("woff2"), url("../../images/webfontkit-20220218-110916/sansation_regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #1C0118;
+}
+
+nav {
+  background-color: #1C0118;
+  color: white;
+  width: 100%;
+  height: 11vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .nav-container {
+  width: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .nav-container .logo {
+  margin-left: 5%;
+  font-size: 36px;
+  font-family: 'ROOSTER PERSONAL USE', sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+@media (max-width: 720px) {
+  nav .nav-container .logo {
+    font-size: 24px;
+  }
+}
+
+nav .nav-container .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-left: auto;
+  list-style: none;
+  width: 40%;
+}
+
+nav .nav-container .list .item {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 720px) {
+  nav .nav-container .list .item {
+    font-size: 14px;
+    margin-right: 5px;
+  }
+}
+
+nav .nav-container .list .item a {
+  color: white;
+  text-decoration: none;
+}
+
+nav .nav-container .list .item .search-bar {
+  position: relative;
+}
+
+nav .nav-container .list .item .search-bar input {
+  background-color: white;
+  color: black;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 16px;
+}
+
+@media (max-width: 480px) {
+  nav .nav-container .list .item .search-bar input {
+    width: 150%;
+    -webkit-transform: translateX(-40px);
+            transform: translateX(-40px);
+    padding: 4px 8px;
+  }
+}
+
+nav .nav-container button {
+  display: none;
+}
+
+main {
+  color: #1C0118;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../images/Lord of the Rings Backgrounds 6.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-bottom: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .form-container {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .form-container form {
+  /* From https://css.glass */
+  /* From https://css.glass */
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  margin-top: 60px;
+  width: 60%;
+  height: 80%;
+  padding-left: 5%;
+  font-family: 'sansation';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main .form-container form legend {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+main .form-container form span a {
+  text-decoration: none;
+  color: #D90429;
+}
+
+main .form-container form input {
+  width: 80%;
+  padding: 8px 24px;
+  background-color: white;
+  border: 1px solid gray;
+  outline: 1px solid gray;
+  border-radius: 4px;
+  -webkit-box-shadow: 0px 0px 2px -1px #1C0118;
+          box-shadow: 0px 0px 2px -1px #1C0118;
+}
+
+main .form-container form .submit {
+  width: 170px;
+  height: 45px;
+  background-color: #D90429;
+  border: none;
+  color: white;
+  outline: none;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-family: 'sansation';
+  border-radius: 10px;
+  margin: 5% 0;
+}
+/*# sourceMappingURL=add.css.map */

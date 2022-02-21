@@ -1,0 +1,76 @@
+
+main{
+    color: $primary;
+    width: 100%;
+    height: 100vh;
+    // margin-top: 11vh;
+    background-image: url('../../images/Lord\ of\ the\ Rings\ Backgrounds\ 6.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: auto;
+    @include flexRow(center,center);
+
+    .form-container{
+        position: absolute;
+        // top: ;
+        width: 50%;
+        height: 100%;
+        // background-color: $primary;
+        @include flexRow(center,center);
+
+        form{
+            /* From https://css.glass */
+            /* From https://css.glass */
+            // background: rgba(255, 255, 255, 0.22);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            // backdrop-filter: blur(5px);
+            // -webkit-backdrop-filter: blur(5px);
+            // border: 1px solid rgba(255, 255, 255, 0.3);
+            background-color: white;
+            margin-top: 60px;
+            width: 60%;
+            height: 80%;
+            padding-left: 5%;
+            font-family: 'sansation';
+            @include flexColumn(flex-start,center);
+            legend{
+                font-size: 28px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            span a{
+                text-decoration: none;
+                color: $secondary;
+            }
+            
+                input{
+                    width: 80%;
+                    padding: 8px 24px;
+                    background-color: white;
+                    border: 1px solid gray;
+                    outline: 1px solid gray;
+                    border-radius: 4px;
+                    box-shadow:  0px 0px 2px -1px $primary;
+
+                }
+            
+            .submit{
+                width: 170px;
+                height: 45px;
+                background-color: $secondary;
+                border: none;
+                color: white;
+                outline: none;
+                text-align: center;
+                padding: 14px;
+                text-decoration: none;
+                font-family: 'sansation';
+                border-radius: 10px;
+                margin: 5% 0;
+            }
+        }
+    }
+}

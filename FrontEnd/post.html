@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/post/post.css">
+    <title>CineMaster</title>*
+    
+
+
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <p class="logo">
+                CineMaster
+            </p>
+            <ul class="list">
+                <li class="item">
+                    <form class="search-bar" action="" method="get">
+                         <input type="text" name="search" placeholder="search">
+                         
+                    </form>
+              </li>
+                <li class="item "> <a href="login.html" class="login">Login/Signup</a> </li>
+            </ul>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>  
+    </nav>
+
+    <aside>
+        <a class="link" href="#"><img src="./images/fantasy.png" alt="Fantasy"> Fantasy </a>
+        <a class="link" href="#"><img src="./images/sci-fi.png" alt="Sci-Fi"> Sci-Fi </a>
+        <a class="link" href="#"><img src="./images/drama.png" alt="Drama"> Drama </a>
+        <a class="link" href="#"><img src="./images/action.png" alt="Action"> Action </a>
+        <a class="link" href="#"><img src="./images/romance.png" alt="Romance"> Romance </a>
+        <a class="see-more" href="#"> See More </a>
+    </aside>
+    
+
+    <section class="main">
+
+        <div id="add" class="form-container">
+            <form action="" method="post">
+                <a id="close-add" class="close" href=""> <img src="./images/close-icon-png-19.jpg" alt="close"></a>
+                <legend>Add a post</legend>
+                <label for="title">Title :</label>
+                <input type="text" name="title" class="title"> 
+                <label for="categorie"> Category :</label>               
+                <input type="text" name="categorie" class="categorie"> 
+                <label for="description">Description :</label>               
+                <textarea class="description" name="description" cols="30" rows="10"></textarea>
+                <label for="image">Image :</label>
+                <input type="file" name="image" class="image">                
+                <input class="submit" type="submit" name="submit" value="Create">
+
+
+            </form>
+            <div id="add-overlay" class="modal-overlay"></div>
+        </div>
+
+        <div id="update" class="form-container">
+            <form action="" method="post">
+                <a id="close-update" class="close" href=""> <img src="./images/close-icon-png-19.jpg" alt="close"></a>
+                <legend>Update a post</legend>
+                <label for="title">Title :</label>
+                <input type="text" name="title" class="title"> 
+                <label for="categorie"> Category :</label>               
+                <input type="text" name="categorie" class="categorie"> 
+                <label for="description">Description :</label>               
+                <textarea class="description" name="description" cols="30" rows="10"></textarea>
+                <label for="image">Image :</label>
+                <input type="file" name="image" class="image">                
+                <input class="submit" type="submit" name="submit" value="Create">
+
+
+            </form>
+            <div id="update-overlay" class=" modal-overlay"></div>
+        </div>
+
+        <div class="add-post">
+            <h3 style="font-weight: bold;">Hello L7aj Lmatich </h3>
+            <p>You have a POV about a TV show ? <a id="add-post" style="color: red;" href="">Add a post</a> and share your thoughts</p>
+        </div>
+
+        <article class="post">
+            <img  class="view-more" src="./images/viewmorehorizontal_104501.png" alt="view-more">
+            <div id="update-delete" class="update-delete">
+                <form method="post" class="add-button" action="">
+                    <input type="hidden" name="person_id" value="">
+    
+                    <button class="update-button-toggler" >
+                        update
+                    </button>
+                </form>
+                <form method="post" class="update-button" action="">
+                    <input type="hidden" name="person_id" value="">
+    
+                    <button class="delete-button-toggler">
+                        delete
+                    </button>
+                </form>
+            </div>            
+            <div class="author">
+                <img class="author-image" src="./images/MaxPixel.net-Male-Man-Person-Handsome-Guy-Face-Portrait-Beard-6309454.jpg" alt="author">
+                <div class="author-info">
+                    <p class="author-name">L7aj Lmatich</p>
+                    <small class="categorie">Fantasy</small>
+                </div>
+            </div>
+            <div class="heading">
+                <h3 class="post-title">The lord of the rings</h3>
+                <p>description here</p>
+            </div>
+            <div class="post-image">
+                <img src="./images/post.jpg" alt="post-image">
+            </div>
+
+            <div class="comments">
+                <a href="">23 comments</a>
+                <form class="comment-form" action="" method="post">
+                    <input placeholder="Add Comment" type="text" name="comment" >
+                </form>
+ 
+                <div class="comments-container">
+                    <div class="user-comment">
+                        <img src="./images/MaxPixel.net-Male-Man-Person-Handsome-Guy-Face-Portrait-Beard-6309454.jpg" alt="profile">
+                        <div class="comment-info">
+                            <h4 class="comment-author" >Taha Lechgar</h4>
+                            <p>Lorem ipsum dolor sit amet consectetur jsdhfjkshdf sldffhuzyhe feiuyro</p>
+                        </div>
+                    </div>
+ 
+                    <div class="user-comment">
+                     <img src="./images/MaxPixel.net-Male-Man-Person-Handsome-Guy-Face-Portrait-Beard-6309454.jpg" alt="profile">
+                     <div class="comment-info">
+                         <h4 class="comment-author" >Taha Lechgar</h4>
+                         <p>Lorem ipsum dolor sit amet consectetur jsdhfjkshdf sldffhuzyhe feiuyro</p>
+                     </div>
+                 </div>
+                 
+                </div>
+            </div>
+            
+        </article>
+
+        <article class="post">
+            <img class="view-more" src="./images/viewmorehorizontal_104501.png" alt="view-more">
+            <div id="update-delete" class="update-delete">
+                <form method="post" class="add-button" action="">
+                    <input type="hidden" name="person_id" value="">
+                    <button class="update-button-toggler">
+                        update
+                    </button>
+                </form>
+                <form method="post" class="update-button" action="">
+                    <input type="hidden" name="person_id" value="">
+    
+                    <button class="delete-button-toggler">
+                        delete
+                    </button>
+                </form>
+            </div>
+           
+            <div class="author">
+                <img class="author-image" src="./images/MaxPixel.net-Male-Man-Person-Handsome-Guy-Face-Portrait-Beard-6309454.jpg" alt="author">
+                <div class="author-info">
+                    <p class="author-name">Taha Lechgar</p>
+                    <small class="categorie">Action</small>
+                </div>
+            </div>
+
+            <div class="heading">
+                <h3 class="post-title"> The witcher</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem eius explicabo id at in ipsum aliquid, perspiciatis expedita provident quae nulla magni repellendus sed praesentium quo ullam repellat, itaque sapiente?</p>
+            </div>
+            <div class="post-image">
+                <img src="./images/main-qimg-a4bfe5b6538b48587799d956cb65668b.jfif" alt="post-image">
+            </div>
+            <div class="comments">
+               <a href="">23 comments</a>
+               <form class="comment-form" action="" method="post">
+                   <input placeholder="Add Comment" type="text" name="comment" >
+               </form>
+
+               <div class="comments-container">
+                   <div class="user-comment">
+                       <img src="./images/MaxPixel.net-Male-Man-Person-Handsome-Guy-Face-Portrait-Beard-6309454.jpg" alt="profile">
+                       <div class="comment-info">
+                           <h4 class="comment-author" >Taha Lechgar</h4>
+                           <p>Lorem ipsum dolor sit amet consectetur jsdhfjkshdf sldffhuzyhe feiuyro</p>
+                       </div>
+                   </div>
+
+                   <div class="user-comment">
+                    <img src="./images/MaxPixel.net-Male-Man-Person-Handsome-Guy-Face-Portrait-Beard-6309454.jpg" alt="profile">
+                    <div class="comment-info">
+                        <h4 class="comment-author" >Taha Lechgar</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur jsdhfjkshdf sldffhuzyhe feiuyro</p>
+                    </div>
+                </div>
+
+               </div>
+            </div>
+        </article>
+    </section>
+
+    <footer>
+        <div class="logo">
+            CineMaster
+        </div>
+        <div class="socials">
+            <img src="./images/facebook white.png" alt="facebook">
+            <img src="./images/insta.png" alt="instagram">
+            <img src="./images/linked.png" alt="linkedin">
+        </div>
+        <div class="policy">Terms of use . Privacy policy</div>
+        <div class="copyright">&copy; 2022 All Rights Reserved
+        </div>
+    </footer>
+
+    <script src="./script/popup.js"></script>
+</body>
+</html>

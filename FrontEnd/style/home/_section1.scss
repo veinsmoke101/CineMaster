@@ -1,0 +1,51 @@
+.section-1{
+    margin-top: 150px;
+    @include flexRow(center,center);
+    width: 100%;
+    height: 60vh; 
+    .img-container{
+        width: 50%;
+        height: 100%;
+        @include flexRow(center,center);
+        img{
+            width: 300px ;
+            height: auto;
+        }
+        @include tablet{
+            order: 2;
+            
+        } 
+        
+    }
+    .body{
+        width: 50%;
+        height: 100%;
+        @include flexColumn(flex-start, center);
+        .title{
+            width: 90%;
+            font-family: 'sansation';
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+        }
+        .p{
+            width: 90%;
+            color: white;
+            margin-top: 5%;
+        }
+        @include tablet{
+            order: 1;
+            width: 100%;
+            text-align: center;
+            .p,.title{
+                width: 100%;
+            }
+        } 
+        
+    }
+    @include tablet{
+        flex-direction: column;
+        height: auto;
+    } 
+    
+}

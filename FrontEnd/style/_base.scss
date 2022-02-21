@@ -1,0 +1,57 @@
+$primary        : #1C0118;
+$secondary      : #D90429;
+
+$breakpoints : (
+    "phone" : 480px,
+    "tablet" : 720px,
+    "large-tablet" : 1220px
+);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('http://fonts.cdnfonts.com/css/rooster-personal-use');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@mixin flexColumn($align , $justify) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+    justify-content: $justify;
+}
+@mixin flexRow($align , $justify) {
+    display: flex;
+    flex-direction: row;
+    align-items: $align;
+    justify-content: $justify;
+}
+@mixin  phone{ 
+    @media(max-width : map-get($breakpoints, "phone")){
+        @content;
+    }
+}
+@mixin  tablet{
+    @media(max-width : map-get($breakpoints, "tablet")){
+        @content;
+    }
+}
+@mixin  large-tablet{ 
+    @media(max-width : map-get($breakpoints, "large-tablet")){
+        @content;
+    }
+}
+
+@font-face {
+    font-family: 'sansation';
+    src: url('../../images/webfontkit-20220218-110916/sansation_regular-webfont.woff2') format('woff2'),
+         url('../../images/webfontkit-20220218-110916/sansation_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: $primary;
+}
