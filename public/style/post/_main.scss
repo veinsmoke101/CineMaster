@@ -1,0 +1,333 @@
+
+aside{
+    background-color: white;
+    width: 250px;
+    border-radius: 10px ;
+    @include flexColumn(flex-start,center);
+    position: fixed;
+    top: 20%;
+    left: 4%;
+    
+    .link {
+        color:black;
+        text-decoration: none;
+        margin: 10px 0 10px 20px;
+        @include flexRow(center,center);
+        img{
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+    }
+    .see-more {
+        color: darkgray;
+        margin-left: 49px;
+        margin-bottom: 20px;
+    }
+    @include large-tablet{
+        display: none;
+    }
+}
+.main{  
+    margin-bottom: 10px;  
+    font-family: 'Poppins', sans-serif;    margin-top: 15vh;
+    width: 50%;
+
+    .form-container{
+
+        transform: scale(0);
+        z-index: 10;
+        position: fixed;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        // background-color: $primary;
+        @include flexRow(center,center);
+
+        
+        .modal-overlay{
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+            &.active{
+                opacity: 0.5;
+            }
+        }
+
+        form{
+            /* From https://css.glass */
+            /* From https://css.glass */
+            // background: rgba(255, 255, 255, 0.22);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            // backdrop-filter: blur(5px);
+            // -webkit-backdrop-filter: blur(5px);
+            // border: 1px solid rgba(255, 255, 255, 0.3);
+            background-color: white;
+            margin-top: 60px;
+            width: 60%;
+            height: 80%;
+            padding-left: 5%;
+            font-family: 'sansation';
+            @include flexColumn(flex-start,center);
+            position: relative;
+
+
+            .close{
+                top: 10px;
+                right: 10px;
+                position: absolute;
+                img{
+                    width: 20px;
+                    height: 20px;
+                }
+                
+            }
+
+            legend{
+                font-size: 28px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            span a{
+                text-decoration: none;
+                color: $secondary;
+            }
+            
+                input,textarea{
+                    width: 80%;
+                    padding: 8px 24px;
+                    background-color: white;
+                    border: 1px solid gray;
+                    outline: 1px solid gray;
+                    border-radius: 4px;
+                    box-shadow:  0px 0px 2px -1px $primary;
+
+                }
+
+            .description{
+                height: 120px;
+            }
+
+            .submit{
+                width: 170px;
+                height: 45px;
+                background-color: $secondary;
+                border: none;
+                color: white;
+                outline: none;
+                text-align: center;
+                padding: 14px;
+                text-decoration: none;
+                font-family: 'sansation';
+                border-radius: 10px;
+                margin: 5% 0;
+            }
+
+            @include tablet{
+                width: 100%;
+            }
+            @include large-tablet{
+                width: 80%;
+            }
+        }
+        &.active{
+            transform: scale(1);
+        }
+
+        @include large-tablet{
+            width: 60%;
+        }
+
+        @include tablet{
+            width: 70%;
+        }
+        @include phone{
+            width: 85%;
+        }
+
+    }
+
+
+
+    .post{
+        position: relative;
+        padding-bottom: 20px;
+        margin-top:5% ;
+        background-color: white;
+        border-radius: 16px;
+        width: 100%;
+        height: auto;
+        @include flexColumn(flex-start,center);
+
+        .update-delete{
+            background-color: lightgray;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 100px;
+            height: 60px;
+            @include flexColumn(center,center);
+            transform: scale(0);
+            border-radius:10px ;
+            
+            &.active{
+                transform: scale(1);
+            }
+            form{
+                @include flexColumn(flex-start,center);
+                button{
+                    background-color: transparent;
+                    width: 80px;
+                    height: 30px;
+                    border: none;
+                    text-align: start;
+                    cursor: pointer;
+                    color: black;
+                    font-weight: bold;
+                    
+                }
+            }
+        }
+
+        .view-more {
+            cursor: pointer;
+            width: 30px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            z-index: 20;
+        }
+        .author{
+            margin-top: 10px;
+            margin-left: 10px;
+            @include flexRow(center,flex-start);
+            img{
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+            }
+            .author-info{
+                @include flexColumn(flex-start,space-around);
+                margin-left: 10px;
+                .author-name{
+                    font-weight: bold;
+                }
+                .categorie{
+                    color: darkgray;
+                }
+
+            }
+            
+        }
+        .heading{
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        .post-image{
+            margin-left: 10px;
+            width: 97%;
+            
+            @include flexRow(center,center);
+            img{
+                border-radius: 16px;
+                width: 100%;
+                height: auto;
+                
+            }
+            
+            @include large-tablet{
+                margin-left: 8px;
+            }
+            @include phone{
+                margin-left: 4px;
+            }
+            
+        }
+        .comments{
+            margin-top: 10px;
+            border-top: 1px solid gray;
+            width: 90%;
+            margin-left:5%;
+            @include flexColumn(flex-start,center);
+            a{
+                font-size: 12px;
+                color: gray;
+            }
+            .comment-form{
+                margin-top: 5px;
+                width: 90%;
+                height: 30px;
+                input{
+                    background-color: lightgray;
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 100%;
+                    outline: none;
+                    border: 1px solid darkgray;
+                    padding: 5px 12px;
+                }
+            }
+            .comments-container {
+                width: 100%;
+                @include flexColumn(flex-start,center);
+                
+                .user-comment{
+                    margin-top: 15px;
+                    @include flexRow(flex-start,center);
+                    img{
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                    }
+                    .comment-info {
+                        padding: 10px ;
+                        @include flexColumn(flex-start,center);
+                        background-color: lightgray;
+                        border-radius: 12px;
+                        margin-left: 10px;
+                        .comment-author{
+                            font-size: 14px;
+                        }
+                        p{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    
+    .add-post{
+        padding-bottom: 20px;
+        margin-top:5% ;
+        background-color: white;
+        border-radius: 16px;
+        width: 100%;
+        height: auto;
+        @include flexColumn(flex-start,center);
+        padding: 10px 20px;
+    }
+
+    @include tablet{
+        width: 80%;
+    }
+    @include large-tablet{
+        width: 70%;
+    }
+    @include phone{
+        width: 90%;
+    }
+
+}
+
+body{
+    background-color: $primary !important;
+    @include flexColumn(center,center);
+    color: $primary;
+}
+
