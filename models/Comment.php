@@ -35,4 +35,10 @@ class Comment
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getCommentById($post_id){
+        $stmt = Database::connect()->prepare('SELECT * FROM post_comments where poste_id = :poste_id group by comment_id desc limit 1;');
+        $stmt->execute(array(':poste_id' => $post_id));
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }

@@ -122,6 +122,7 @@
 
 </section>
 
+<script src="/script/comment-ajax.js"></script>
 <script src="/script/popup.js"></script>
 <script src="/script/post.js"></script>
 

@@ -67,16 +67,17 @@ class PostController extends Controller
                 $data = $_POST['poste_id'];
                 $this->post->deletePost($data);
                 header('Location: /post');
-            }elseif (isset($_POST['comment'])){
-                $data = array(
-                    'comment_poste' => $_POST['poste_id'],
-                    'comment_author' => $_SESSION['user_id'],
-                    'description' => $_POST['comment']
-                );
-                $this->comment->addComment($data);
-//                header('Location: /post');
-
             }
+//             elseif (isset($_POST['comment'])){
+//                 $data = array(
+//                     'comment_poste' => $_POST['poste_id'],
+//                     'comment_author' => $_SESSION['user_id'],
+//                     'description' => $_POST['comment']
+//                 );
+//                 $this->comment->addComment($data);
+// //                header('Location: /post');
+
+//             }
 
             $comments = $this->comment->getAllComments();
             $current = $this->user->getUserById($_SESSION['user_id']);
@@ -90,6 +91,24 @@ class PostController extends Controller
         }
 
         header('Location: /login');
+
+    }
+
+    public function comment()
+    {
+        session_start();
+        if (isset($_POST['comment'])){
+            $data = array(
+                'comment_poste' => $_POST['poste_id'],
+                'comment_author' => $_SESSION['user_id'],
+                'description' => $_POST['comment']
+            );
+            $this->comment->addComment($data);
+            $comments = $this->comment->getCommentById($data['comment_poste']);
+            $commentsJSON = json_encode($comments);
+            echo $commentsJSON;
+
+        }
 
     }
 
